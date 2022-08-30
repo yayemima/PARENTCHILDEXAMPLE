@@ -1,0 +1,16 @@
+<button (click)="updateUser()">Update</button>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let n of nameList">
+            <td>{{n}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<app-child [userName]="userName" (childEvent)="addNameToList($event)"></app-child>
+
